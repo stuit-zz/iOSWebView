@@ -10,13 +10,14 @@ TODO:
  - disabling background shadows and making background transparent
 
 example:
-Consts.IOS = Capabilities.manufacturer.indexOf("iOS") != -1;
-if (Consts.IOS)
-{
-  var webview:StageWebView = new StageWebView();
-  webview.stage = stage;
-  webview.viewPort = new Rectangle(0, 0, stage.fulScreenWidth, stage.fullScreenHeight);
+
+	var iOS:Boolean = Capabilities.manufacturer.indexOf("iOS") != -1;
+	if (iOS)
+	{
+		var webview:StageWebView = new StageWebView();
+		webview.stage = stage;
+		webview.viewPort = new Rectangle(0, 0, stage.fulScreenWidth, stage.fullScreenHeight);
   
-  WebView.instance.init();
-  WebView.instance.setupWebView();
-}
+		WebView.instance.init();
+		WebView.instance.setupWebView();
+	}
